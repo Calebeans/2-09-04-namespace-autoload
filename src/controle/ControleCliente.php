@@ -2,6 +2,7 @@
 namespace App\Controle;
 
 use App\Modelo\Cliente;
+use App\Visao\VisaoCliente;
 
 class ControleCliente
 {
@@ -15,9 +16,11 @@ class ControleCliente
     }
     public function listar()
     {
-        echo '<pre>';
-        print_r(Cliente::list());
-        echo '</pre>';
+        $vC = new VisaoCliente();
+        $vC -> exibeLista(Cliente::list());
+        //echo '<pre>';
+        //print_r(Cliente::list());
+        //echo '</pre>';
 
     }
 }

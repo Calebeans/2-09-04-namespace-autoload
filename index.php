@@ -11,7 +11,7 @@ $router->get('/', function (){
 
 $router->setNamespace('\App\Controle');
 $router->get('/clientes', 'ControleCliente@listar');
-$router->get('/clientes/novo', 'ControleCliente@cadastrar');
+$router->get('/clientes', 'ControleCliente@cadastrar');
 
 //$router->get('/clientes', function (){
 //    $cc = new ControleCliente();
